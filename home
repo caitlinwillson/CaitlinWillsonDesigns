@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caitlin Willson | Home - Professional Portfolio</title>
+    <!-- Load Tailwind CSS for fast, responsive utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* * 🎨 Custom Aesthetic Styling
+         * This CSS section defines the unique 'creamy, pastel, floral, earthy' look.
+         */
+        
+        :root {
+            --color-cream: #FFFBF5; /* Soft, creamy white for background */
+            --color-linen: #EFEBE5; /* Light earthy base */
+            --color-sage: #A3B5A1; /* Muted pastel green (sage) */
+            --color-rose: #D9A8A5; /* Dusty rose pastel */
+            --color-text: #3E383A;  /* Deep charcoal/earthy brown for legibility */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--color-cream);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            scroll-behavior: smooth;
+        }
+
+        .header-text {
+            font-family: var(--font-serif);
+            font-weight: 600;
+        }
+
+        /* Styling the unique floral/earthy section separator */
+        .section-divider {
+            position: relative;
+            height: 1px;
+            background-color: var(--color-linen);
+            margin: 4rem 0;
+            overflow: visible;
+        }
+
+        /* Custom dot accent for the divider */
+        .section-divider::before {
+            content: '•';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--color-sage);
+            font-size: 2.5rem;
+            line-height: 0;
+            padding: 0 1rem;
+            background-color: var(--color-cream);
+            z-index: 10;
+        }
+
+        /* Card styles for portfolio projects */
+        .portfolio-card {
+            transition: all 0.3s ease;
+            box-shadow: 5px 5px 15px rgba(163, 181, 161, 0.2); /* Soft sage shadow */
+            border-bottom: 4px solid var(--color-rose); /* Pastel rose accent line */
+            border-radius: 0.5rem;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 20px rgba(163, 181, 161, 0.4);
+        }
+
+        .btn-primary {
+            background-color: var(--color-sage);
+            color: var(--color-cream);
+            font-weight: 500;
+            transition: background-color 0.2s;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1.5rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #7D907A; /* Darker sage for hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar (Consistent across all pages) -->
+    <nav class="sticky top-0 z-50 bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="header-text text-2xl" style="color: var(--color-text);">Caitlin Willson | Portfolio</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="about.html" class="text-sm font-medium hover:text-gray-900 px-3 py-2 rounded-md">About Me & Resume</a>
+                    <a href="portfolio.html" class="text-sm font-medium hover:text-gray-900 px-3 py-2 rounded-md">Portfolio Projects</a>
+                    <a href="blog.html" class="text-sm font-medium hover:text-gray-900 px-3 py-2 rounded-md">Blog & Digital Work</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 1. HOME SECTION: ELEGANT INTRODUCTION -->
+        <section id="home" class="py-24 md:py-32 flex flex-col items-center justify-center text-center min-h-screen-75">
+            <h1 class="header-text text-5xl md:text-7xl mb-6" style="color: var(--color-rose);">
+                <span style="color: var(--color-sage);">Creativity</span> & Strategy.
+            </h1>
+            <p class="text-2xl font-light max-w-3xl mb-12" style="color: var(--color-text); font-family: var(--font-serif);">
+                A holistic showcase of digital content execution, editorial strategy, and operational insight, driven by a blend of technical skill and creative passion.
+            </p>
+            <a href="portfolio.html" class="btn-primary text-lg">View My Work</a>
+        </section>
+
+        <!-- Floral/Earthy Divider -->
+        <div class="section-divider"></div>
+
+        <!-- QUICK LINKS TO OTHER PAGES -->
+        <section class="py-12 text-center">
+            <h2 class="header-text text-3xl mb-8" style="color: var(--color-text);">Quick Access</h2>
+            <div class="flex justify-center space-x-6 flex-wrap">
+                <a href="about.html" class="text-lg font-medium underline" style="color: var(--color-sage);">My Bio & Experience &raquo;</a>
+                <a href="blog.html" class="text-lg font-medium underline" style="color: var(--color-sage);">Latest Insights &raquo;</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact Section (Must be in ALL four files) -->
+    <footer class="py-12 mt-20" style="background-color: var(--color-linen);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm" style="color: var(--color-text);">
+            
+            <!-- Contact Info Column -->
+            <div>
+                <h4 class="header-text text-lg mb-4" style="color: var(--color-sage);">Connect</h4>
+                <p class="font-medium">Caitlin Willson</p>
+                <p>126 Willowbrook Ct</p>
+                <p>Kingsport, TN 37660</p>
+                <p>Phone: (423) 863-8089</p>
+                <p>Email: <a href="mailto:caitlinwillson@gmail.com" class="underline hover:text-gray-900">caitlinwillson@gmail.com</a></p>
+            </div>
+
+            <!-- Navigation Links Column -->
+            <div>
+                <h4 class="header-text text-lg mb-4" style="color: var(--color-sage);">Navigation</h4>
+                <ul class="space-y-1">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="about.html" class="hover:underline">About Me</a></li>
+                    <li><a href="portfolio.html" class="hover:underline">Portfolio Projects</a></li>
+                    <li><a href="blog.html" class="hover:underline">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Sign Up Column -->
+            <div>
+                <h4 class="header-text text-lg mb-4" style="color: var(--color-sage);">Stay Updated</h4>
+                <p class="mb-3">Sign up for my (fake) newsletter for the latest projects and insights!</p>
+                <form onsubmit="alert('Thank you for signing up for Caitlin's newsletter! (This is a fake sign up form for the project)'); return false;">
+                    <input type="email" placeholder="Your Email Address" required class="w-full p-2 mb-3 rounded-md border" style="border-color: var(--color-rose); background-color: var(--color-cream); color: var(--color-text);">
+                    <button type="submit" class="btn-primary w-full text-base">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-xs" style="color: var(--color-text); font-family: var(--font-serif);">&copy; 2025 Caitlin Willson Portfolio. All Rights Reserved. | Final Academic Project</p>
+        </div>
+    </footer>
+
+</body>
+</html>
