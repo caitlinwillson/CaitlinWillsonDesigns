@@ -90,38 +90,56 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
 
-        <!-- ABOUT ME SECTION: PROFESSIONAL BIO -->
+        <!-- ABOUT ME SECTION: PROFESSIONAL BIO AND SKILLS -->
         <section id="about" class="mb-20">
             <h2 class="header-text text-4xl md:text-5xl text-center mb-16" style="color: var(--color-sage);">
-                About Caitlin: The Editor & Strategist
+                About Me: Strategy, Creativity, and the Personal Foundation
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                 
-                <!-- Left Column: Image -->
-                <div class="md:col-span-1 rounded-lg overflow-hidden shadow-xl">
-                    <img 
-                        src="https://placehold.co/800x1200/A3B5A1/FFF?text=Caitlin+Willson+Profile" 
-                        alt="Professional Headshot Placeholder" 
-                        class="w-full h-auto object-cover rounded-lg"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x1200/D9A8A5/FFF?text=Caitlin+Profile';"
-                    >
+                <!-- Left Column: Image & Certifications -->
+                <div class="md:col-span-1 space-y-8">
+                    <div class="rounded-lg overflow-hidden shadow-xl">
+                        <img 
+                            src="https://placehold.co/800x1200/A3B5A1/FFF?text=Caitlin+Willson+Profile" 
+                            alt="Professional Headshot Placeholder" 
+                            class="w-full h-auto object-cover rounded-lg"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x1200/D9A8A5/FFF?text=Caitlin+Profile';"
+                        >
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4" style="border-color: var(--color-rose);">
+                        <h3 class="header-text text-xl mb-3" style="color: var(--color-text);">Professional Certifications</h3>
+                        <ul class="text-sm space-y-1">
+                            <li style="color: var(--color-sage);">CAP Certified (Certified Administrative Professional)</li>
+                            <li style="color: var(--color-sage);">PACE Certified (Professional Administrative Certification of Excellence)</li>
+                            <li>CAPM (Certified Associate in Project Management) — *In Progress*</li>
+                            <li>CPR/AED Certified</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Right Columns: Bio and Skills -->
+                <!-- Right Columns: Bio, Experience Summary, and Skills -->
                 <div class="md:col-span-2 space-y-8">
+                    
+                    <!-- Bio -->
                     <div class="bg-white p-8 rounded-xl shadow-lg border-t-4" style="border-color: var(--color-rose);">
                         <p class="text-lg leading-relaxed text-gray-700">
-                            I specialize in bridging creative vision with corporate objectives. My background in editorial work (magazine & blog) combined with technical execution (video & digital marketing) allows me to develop holistic content strategies that resonate with modern audiences while maintaining a high level of academic integrity and professional polish.
+                            Beyond the desk, I am deeply rooted in creative passions. I was married last year, I am a proud dog parent, and I find essential balance through crochet (a love that inspired one of my featured projects) and swimming. Professionally, I specialize in bridging high-level administrative expertise with dynamic digital strategy. With over a decade of experience as an Executive Assistant and Operations Aide in academic settings, I offer proven proficiency in financial management, complex scheduling, policy auditing, and maintaining strict confidentiality (HIPAA/FERPA). I am currently enhancing this foundational experience with coursework in Media and Communications, with the goal of transitioning into a **Strategic Operations Officer** role where I can act as a force multiplier—designing sustainable operational workflows that maximize executive impact.
                         </p>
                     </div>
 
-                    <h3 class="header-text text-3xl mt-12" style="color: var(--color-text);">Key Skills</h3>
-                    <div class="flex flex-wrap gap-4">
-                        <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Video Production</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">SEO/Digital Strategy</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Long-Form Editorial</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Podcast Editing</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">UI/UX Copywriting</span>
+                    <!-- Key Skills (NEW, Robust list) -->
+                    <div>
+                        <h3 class="header-text text-3xl mt-6 mb-4" style="color: var(--color-text);">Core Competencies</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Strategic Operations & Executive Partnership</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Governance & Compliance Architecture (300+ Policies)</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Financial Stewardship & Fund Analysis ($2M Budget)</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Organizational Leadership & Team Enablement</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Digital Content & Brand Experience (Adobe/HTML/CSS)</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-sm font-medium" style="color: var(--color-sage); border: 1px solid var(--color-sage);">Microsoft 365 & Google Workspace Mastery</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,39 +151,69 @@
         <!-- RESUME/EXPERIENCE DETAIL SECTION -->
         <section id="resume">
             <h2 class="header-text text-4xl md:text-5xl text-center mb-16" style="color: var(--color-rose);">
-                Resume Highlights
+                Experience & Education
             </h2>
 
             <div class="max-w-4xl mx-auto space-y-12">
-
-                <!-- Job Entry 1 -->
-                <div class="border-l-4 p-4 pl-6 relative" style="border-color: var(--color-rose);">
-                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">Content Lead</h3>
-                    <p class="text-lg font-medium" style="color: var(--color-rose);">Acme Digital Solutions</p>
-                    <p class="text-sm text-gray-500 mb-4">2023 – Present</p>
-                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
-                        <li>Managed content lifecycle from ideation to deployment, overseeing 50+ assets monthly.</li>
-                        <li>Implemented a new tagging system that increased organic search visibility by 22% in six months.</li>
-                        <li>Mentored a team of junior writers and digital artists.</li>
-                    </ul>
+                
+                <!-- EDUCATION SECTION -->
+                <div class="border-l-4 p-4 pl-6 relative" style="border-color: var(--color-sage);">
+                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">Bachelors of Arts in Media and Communications</h3>
+                    <p class="text-lg font-medium" style="color: var(--color-sage);">East Tennessee State University</p>
+                    <p class="text-sm text-gray-500 mb-4">In Progress: 2025 – 2027</p>
+                    <h3 class="header-text text-2xl mb-1 mt-4" style="color: var(--color-text);">Associate of Science, University Parallel</h3>
+                    <p class="text-lg font-medium" style="color: var(--color-sage);">Northeast State Community College</p>
+                    <p class="text-sm text-gray-500 mb-4">Awarded: May 2025</p>
                 </div>
 
-                <!-- Job Entry 2 -->
+                <!-- Job Entry 1: Executive Assistant & Event Producer -->
                 <div class="border-l-4 p-4 pl-6 relative" style="border-color: var(--color-rose);">
-                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">Associate Editor</h3>
-                    <p class="text-lg font-medium" style="color: var(--color-rose);">University Press Magazine</p>
-                    <p class="text-sm text-gray-500 mb-4">2021 – 2023</p>
+                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">Executive Assistant and Event Producer</h3>
+                    <p class="text-lg font-medium" style="color: var(--color-rose);">Northeast State Community College</p>
+                    <p class="text-sm text-gray-500 mb-4">2022 – Present</p>
                     <ul class="list-disc ml-6 space-y-2 text-gray-700">
-                        <li>Directed editorial calendar and fact-checked all academic articles prior to publication.</li>
-                        <li>Designed initial wireframes for the online archive, improving user navigation.</li>
+                        <li>Managed financials and analysis for $2 million in federal and state funding.</li>
+                        <li>Coordinated purchasing, invoicing, and budgeting across multiple departments.</li>
+                        <li>Audited, revised, and created over 300 collegiate policies.</li>
+                        <li>Produced marketing materials, presentations, and digital media, including departmental web pages and Teams sites.</li>
+                        <li>Provided executive support, managing 5+ calendars, complex meetings, and travel logistics.</li>
                     </ul>
                 </div>
                 
-                <!-- Education -->
-                 <div class="border-l-4 p-4 pl-6 relative" style="border-color: var(--color-rose);">
-                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">M.A. Communications</h3>
-                    <p class="text-lg font-medium" style="color: var(--color-rose);">State University, Honors Program</p>
-                    <p class="text-sm text-gray-500 mb-4">2019 – 2021</p>
+                <!-- Job Entry 2: Brand Ambassador / Experiential Marketing -->
+                <div class="border-l-4 p-4 pl-6 relative" style="border-color: var(--color-rose);">
+                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">Brand Ambassador / Experiential Branding</h3>
+                    <p class="text-lg font-medium" style="color: var(--color-rose);">GMR Marketing</p>
+                    <p class="text-sm text-gray-500 mb-4">2018 – 2023</p>
+                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                        <li>Executed large-scale experiential branding events for national clients.</li>
+                        <li>Engaged consumers directly to promote brand identity and key messaging.</li>
+                        <li>Managed event logistics, setup, and consumer interaction while maintaining strong brand representation.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Entry 3: Executive Aide -->
+                <div class="border-l-4 p-4 pl-6 relative" style="border-color: var(--color-rose);">
+                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">Executive Aide</h3>
+                    <p class="text-lg font-medium" style="color: var(--color-rose);">East Tennessee State University</p>
+                    <p class="text-sm text-gray-500 mb-4">2018 – 2022</p>
+                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                        <li>Ensured strict HIPAA/FERPA privacy and compliance for student and employee records.</li>
+                        <li>Supervised graduate and student workers and managed timekeeping for over 50 employees.</li>
+                        <li>Conducted data collection and entry for courses, finances, and academic programs.</li>
+                    </ul>
+                </div>
+                
+                <!-- Job Entry 4: Human Resource Assistant -->
+                <div class="border-l-4 p-4 pl-6 relative" style="border-color: var(--color-rose);">
+                    <h3 class="header-text text-2xl mb-1" style="color: var(--color-text);">Human Resource Assistant</h3>
+                    <p class="text-lg font-medium" style="color: var(--color-rose);">East Tennessee State University</p>
+                    <p class="text-sm text-gray-500 mb-4">2015 – 2018</p>
+                    <ul class="list-disc ml-6 space-y-2 text-gray-700">
+                        <li>Managed employee onboarding, orientation, and verification processes.</li>
+                        <li>Maintained over 50,000 electronic and physical employment files.</li>
+                        <li>Ensured employee compliance with federal, state, and University policies.</li>
+                    </ul>
                 </div>
             </div>
              <div class="text-center mt-16">
@@ -183,7 +231,7 @@
             <div>
                 <h4 class="header-text text-lg mb-4" style="color: var(--color-sage);">Connect</h4>
                 <p class="font-medium">Caitlin Willson</p>
-                <p>126 Willowbrook, Ct</p>
+                <p>126 Willowbrook Ct</p>
                 <p>Kingsport, TN 37660</p>
                 <p>Phone: (423) 863-8089</p>
                 <p>Email: <a href="mailto:caitlinwillson@gmail.com" class="underline hover:text-gray-900">caitlinwillson@gmail.com</a></p>
@@ -195,7 +243,7 @@
                 <ul class="space-y-1">
                     <li><a href="index.html" class="hover:underline">Home</a></li>
                     <li><a href="about.html" class="hover:underline">About Me</a></li>
-                    <li><a href="portfolio.html" class="hover:underline">Portfolio Projects</a></li>
+                    <li><a href="portfolio.html" class="hover:underline">Portfolio</a></li>
                     <li><a href="blog.html" class="hover:underline">Blog</a></li>
                 </ul>
             </div>
