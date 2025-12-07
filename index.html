@@ -127,11 +127,8 @@
 
     <!-- JavaScript for the Scrolling Carousel -->
     <script>
-        // Function to scroll the carousel left or right
         function scrollCarousel(direction) {
             const container = document.getElementById('feature-carousel');
-            // Calculate scroll amount based on the width of a single card plus spacing (approx 100% of the item width)
-            // For a smoother scroll that shows the next item
             const itemWidth = container.querySelector('.portfolio-card').offsetWidth;
             
             if (direction === 'left') {
@@ -141,21 +138,15 @@
             }
         }
 
-        // Function to simulate getting the current date minus one month for the headline
         function getPreviousMonth() {
             const date = new Date();
-            // Get the current month number (0-11)
             let month = date.getMonth(); 
-            // Calculate the target month number (one month prior, wrapping around the year)
             let targetMonth = (month === 0) ? 11 : month - 1;
             
-            // Set the date object to the target month for formatting
             date.setMonth(targetMonth);
 
-            // Set the year based on the target month
             let year = date.getFullYear();
             if (month === 0) {
-                // If current month is January (0), target is December (11) of the previous year
                 year--; 
             }
 
@@ -200,10 +191,10 @@
             <!-- Personal Image -->
             <div class="w-full max-w-xl mb-12 rounded-xl overflow-hidden shadow-2xl" style="box-shadow: 0 10px 25px rgba(217, 168, 165, 0.5);">
                  <img 
-                    src="https://placehold.co/1200x500/EFEBE5/3E383A?text=Caitlin+Willson+Hero+Image+(Earthy+Pastel)" 
-                    alt="Caitlin Willson professional and creative hero image" 
+                    src="https://res.cloudinary.com/dluawhzl8/image/upload/v1764773787/PXL_20231028_172906902.ACTION_PAN-01.COVER_bilmsd.jpg" 
+                    alt="Caitlin Willson, husband and son" 
                     class="w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/1200x500/D9A8A5/FFF?text=Strategy+Meets+Content';"
+                    onerror="this.onerror=null;this.src='https://res.cloudinary.com/dluawhzl8/image/upload/v1764773787/PXL_20231028_172906902.ACTION_PAN-01.COVER_bilmsd.jpg';"
                 >
             </div>
             
