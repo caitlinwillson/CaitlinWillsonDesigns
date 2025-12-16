@@ -174,7 +174,7 @@
         </div>
     </nav>
 
-   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
 
         <!-- PORTFOLIO CAROUSEL SECTION -->
         <section id="portfolio" class="mb-20">
@@ -182,17 +182,18 @@
                 Featured Content & Digital Works
             </h2>
 
-            <!-- CAROUSEL WRAPPER: Removed 'relative flex items-center' from here -->
-            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <!-- NEW CAROUSEL WRAPPER: Flex container aligning items center, using space-x to push buttons apart on larger screens -->
+            <div class="flex items-center justify-between -mx-4 sm:mx-0">
                 
-                <!-- Scroll Left Button (Now positioned next to the carousel) -->
-                <button onclick="scrollCarousel('left')" class="p-3 bg-white rounded-full shadow-lg hover:shadow-xl sm:order-1" style="color: var(--color-sage);">
+                <!-- Scroll Left Button (Now outside the scrollable container) -->
+                <!-- Only visible on medium and larger screens (sm:block) -->
+                <button onclick="scrollCarousel('left')" class="p-3 bg-white rounded-full shadow-lg hover:shadow-xl ml-2 mr-2 hidden sm:block" style="color: var(--color-sage);">
                     &lt;
                 </button>
 
-                <!-- Carousel Container -->
-                <!-- The carousel div remains flex to keep cards horizontal -->
-                <div id="project-carousel" class="flex p-2 carousel-container w-full overflow-x-auto sm:order-2">
+                <!-- Carousel Container (Takes up main space) -->
+                <!-- Ensure w-full is used here to fill the available space -->
+                <div id="project-carousel" class="flex p-2 carousel-container w-full overflow-x-auto">
                     
                     <!-- NEW PROJECT CARDS GO HERE (START OF LIST) -->
 
