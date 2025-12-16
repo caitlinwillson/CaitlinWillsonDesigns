@@ -60,6 +60,23 @@
             box-shadow: 5px 5px 15px rgba(163, 181, 161, 0.2); /* Soft sage shadow */
             border-bottom: 4px solid var(--color-rose); /* Pastel rose accent line */
             border-radius: 0.5rem;
+            
+            /* CAROUSEL SIZING FOR FLEXBOX: */
+            flex-shrink: 0; /* Prevents card from shrinking */
+            width: 90%; /* Mobile: Show almost one card */
+            margin-right: 1.5rem; /* Spacing between cards */
+        }
+        
+        @media (min-width: 640px) {
+            .portfolio-card {
+                width: calc(50% - 1rem); /* Tablet: Show two cards */
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .portfolio-card {
+                width: calc(33.333% - 1.5rem); /* Desktop: Show three cards */
+            }
         }
 
         .portfolio-card:hover {
@@ -79,9 +96,65 @@
         .btn-primary:hover {
             background-color: #7D907A; 
         }
+
+        /* Responsive Video Container for 16:9 Aspect Ratio */
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 * 100) */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* CAROUSEL STYLES */
+        .carousel-container {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem;
+        }
+
+        .carousel-item {
+            scroll-snap-align: start; 
+        }
+        
+        /* Hide scrollbar visually */
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 <body>
+    
+    <!-- JavaScript for the Scrolling Carousel -->
+    <script>
+        // Function to scroll the carousel left or right
+        function scrollCarousel(direction) {
+            const container = document.getElementById('project-carousel');
+            const itemWidth = container.querySelector('.portfolio-card').offsetWidth;
+            
+            if (direction === 'left') {
+                container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: itemWidth, behavior: 'smooth' });
+            }
+        }
+    </script>
+
 
     <!-- Navigation Bar (Consistent across all pages) -->
     <nav class="sticky top-0 z-50 bg-white/95 shadow-md backdrop-blur-sm">
@@ -103,87 +176,100 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
 
-        <!-- PORTFOLIO GRID -->
+        <!-- PORTFOLIO CAROUSEL SECTION -->
         <section id="portfolio" class="mb-20">
             <h2 class="header-text text-4xl md:text-5xl text-center mb-16" style="color: var(--color-rose);">
                 Featured Content & Digital Works
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Changed to 4-column layout since you added the Starbucks report -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Project 4: Brand Strategy Report (NEW) -->
-                <div class="portfolio-card bg-white p-6">
-                    <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Brand Strategy Report</h3>
-                    <p class="text-sm text-gray-600 mb-4">Strategic Analysis & Actionable Recommendations</p>
-                    <div class="h-48 bg-gray-200 flex items-center justify-center rounded-lg mb-4 overflow-hidden">
-                         <!-- Placeholder for Report Cover Page - Using custom colors -->
-                        <span class="text-sm font-medium text-center p-4" style="color: var(--color-sage);">Report Cover Mockup</span>
+            <div class="relative flex items-center">
+                <!-- Scroll Left Button -->
+                <button onclick="scrollCarousel('left')" class="absolute left-0 z-20 p-3 bg-white rounded-full shadow-lg hover:shadow-xl ml-2 -translate-y-1/2 top-1/2 hidden sm:block" style="color: var(--color-sage);">
+                    &lt;
+                </button>
+
+                <!-- Carousel Container -->
+                <div id="project-carousel" class="flex p-2 carousel-container w-full">
+                    
+                    <!-- NEW PROJECT CARDS GO HERE (START OF LIST) -->
+
+                    <!-- Project 4: Brand Strategy Report (NEW) -->
+                    <div class="portfolio-card bg-white p-6 carousel-item">
+                        <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Brand Strategy Report</h3>
+                        <p class="text-sm text-gray-600 mb-4">Strategic Analysis & Actionable Recommendations</p>
+                        <div class="h-48 bg-gray-200 flex items-center justify-center rounded-lg mb-4 overflow-hidden">
+                            <img src="https://res.cloudinary.com/dluawhzl8/image/upload/v1765921471/Starbucks_Report_Slideshow_-_Caitlin_Willson_gtt9vf.png" alt="PPT Cover for Back To Starbucks Report" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <p class="text-sm font-medium text-gray-800 mb-2">Report Focus: Reviving the "Back to Starbucks" Experience</p>
+                        <p class="text-gray-700 text-sm mb-4">This comprehensive brand management report analyzes Starbucks' 2024 "Back to Starbucks" strategy, evaluating its communication efforts and operational challenges using the Customer-Based Brand Equity (CBBE) model.</p>
+                        <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Microsoft Word / Academic Research</p>
+                        
+                        <a href="Final Project - Caitlin Willson - Starbucks Report.pdf" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold underline" style="color: var(--color-sage);">Read Full Analysis &raquo;</a>
+                    </div>
+
+
+                    <!-- Project 1: Video Production (Crochet) -->
+                    <div class="portfolio-card bg-white p-6 carousel-item">
+                        <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Video Production: Crochet Tutorial</h3>
+                        <p class="text-sm text-gray-600 mb-4">Educational Content & Technical Proficiency</p>
+                        
+                        <!-- RESPONSIVE VIDEO CONTAINER APPLIED AROUND YOUR IFRAME -->
+                        <div class="video-responsive rounded-lg mb-4">
+                            <iframe src="https://www.youtube.com/embed/35UWBK7O2lM?si=EGaLRqq_rfQVYVnG" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <!-- END RESPONSIVE VIDEO CONTAINER -->
+                        
+                        <p class="text-sm font-medium text-gray-800 mb-2">Project Focus: Half Double Crochet Washcloth</p>
+                        <p class="text-gray-700 text-sm mb-4">This project demonstrates proficiency in video editing, YouTube content structuring, and clear, step-by-step instructional design.</p>
+                        <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Adobe Premiere Pro</p>
+
+                        <a href="https://www.youtube.com/embed/35UWBK7O2lM" target="_blank" class="text-sm font-semibold underline" style="color: var(--color-sage);">Watch on YouTube &raquo;</a>
                     </div>
                     
-                    <p class="text-sm font-medium text-gray-800 mb-2">Report Focus: Reviving the "Back to Starbucks" Experience</p>
-                    <p class="text-gray-700 text-sm mb-4">This comprehensive brand management report analyzes Starbucks' 2024 "Back to Starbucks" strategy, evaluating its communication efforts and operational challenges using the Customer-Based Brand Equity (CBBE) model.</p>
-                    <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Microsoft Word / Academic Research</p>
-                    <a href="Final Project - Caitlin Willson - Starbucks Report.pdf" class="text-sm font-semibold underline" style="color: var(--color-sage);">Read Full Analysis &raquo;</a>
-                </div>
-                
-                <!-- Project 1: Video Production (Crochet) -->
-                <div class="portfolio-card bg-white p-6">
-                    <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Video Production: Crochet Tutorial</h3>
-                    <p class="text-sm text-gray-600 mb-4">Educational Content & Technical Proficiency</p>
-                    
-                    <!-- RESPONSIVE VIDEO CONTAINER APPLIED AROUND YOUR IFRAME -->
-                    <div class="video-responsive rounded-lg mb-4">
-                        <iframe src="https://www.youtube.com/embed/35UWBK7O2lM?si=EGaLRqq_rfQVYVnG" 
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                referrerpolicy="strict-origin-when-cross-origin" 
-                                allowfullscreen></iframe>
+                    <!-- Project 2: Podcast -->
+                    <div class="portfolio-card bg-white p-6 carousel-item">
+                        <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Podcast: "Parts Per Million"</h3>
+                        <p class="text-sm text-gray-600 mb-4">Audio Production & Narrative Storytelling</p>
+                        <div class="aspect-square bg-gray-200 flex items-center justify-center rounded-lg mb-4 overflow-hidden">
+                            <!-- Robust Placeholder Image (using placehold.co) -->
+                            <img src="https://res.cloudinary.com/dluawhzl8/image/upload/v1764773715/PXL_20231015_193850000_3_wojqd8.jpg" alt="Parts Per Million Podcast Cover" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <p class="text-sm font-medium text-gray-800 mb-2">Feature Episode: Homesteading with Glendora Maines</p>
+                        <p class="text-gray-700 text-sm mb-4">Focuses on how diverse individual lived experiences contribute to the complexity and richness of the global community, fostering mutual understanding.</p>
+                        <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Adobe Audition</p>
+
+                        <a href="https://open.spotify.com/episode/0FsWTp2PKsEzQkJX5sq8gn?si=RFa8R0MvRxeijBsATehR6Q" class="text-sm font-semibold underline" style="color: var(--color-sage);">Listen to the Episode &raquo;</a>
                     </div>
-                    <!-- END RESPONSIVE VIDEO CONTAINER -->
-                    
-                    <p class="text-sm font-medium text-gray-800 mb-2">Project Focus: Half Double Crochet Washcloth</p>
-                    <p class="text-gray-700 text-sm mb-4">This project demonstrates proficiency in video editing, YouTube content structuring, and clear, step-by-step instructional design.</p>
-                    <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Adobe Premiere Pro</p>
 
-                    <a href="https://www.youtube.com/embed/35UWBK7O2lM" target="_blank" class="text-sm font-semibold underline" style="color: var(--color-sage);">Watch on YouTube &raquo;</a>
-                </div>
-                
-                <!-- Project 2: Podcast -->
-                <div class="portfolio-card bg-white p-6">
-                    <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Podcast: "Parts Per Million"</h3>
-                    <p class="text-sm text-gray-600 mb-4">Audio Production & Narrative Storytelling</p>
-                    <div class="aspect-square bg-gray-200 flex items-center justify-center rounded-lg mb-4">
-    <img src="https://res.cloudinary.com/dluawhzl8/image/upload/v1764773715/PXL_20231015_193850000_3_wojqd8.jpg" alt="The Parte Per Million Podcast" class="w-full h-full object-cover">
-</div> 
-                    
-                    <p class="text-sm font-medium text-gray-800 mb-2">Feature Episode: Homesteading with Glendora Maines</p>
-                    <p class="text-gray-700 mb-4">Focuses on how diverse individual lived experiences contribute to the complexity and richness of the global community, fostering mutual understanding.</p>
-                    <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Adobe Audition</p>
-
-                    <a href="https://open.spotify.com/episode/0FsWTp2PKsEzQkJX5sq8gn?si=RFa8R0MvRxeijBsATehR6Q" class="text-sm font-semibold underline" style="color: var(--color-sage);">Listen to the Episode &raquo;</a>
-                </div>
-
-                <!-- Project 1: Magazine/Editorial -->
-                <div class="portfolio-card bg-white p-6">
-                    <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Magazine: "The Operationalist"</h3>
-                    <p class="text-sm text-gray-600 mb-4">Editorial Feature & Professional Insight</p>
-                    <div class="h-48 bg-gray-200 flex items-center justify-center rounded-lg mb-4">
-                    <div class="h-32 bg-gray-100 flex items-center justify-center rounded-lg mb-4 overflow-hidden">
-    <img src="The Operationalist Cover_Page_1 smol.png" alt="The Operationalist Magazine Cover" class="w-full h-full object-cover">
-</div>                            
-                            
+                    <!-- Project 3: Magazine/Editorial -->
+                    <div class="portfolio-card bg-white p-6 carousel-item">
+                        <h3 class="header-text text-2xl mb-2" style="color: var(--color-text);">Magazine: "The Operationalist"</h3>
+                        <p class="text-sm text-gray-600 mb-4">Editorial Feature & Professional Insight</p>
+                        <div class="h-48 bg-gray-200 flex items-center justify-center rounded-lg mb-4 overflow-hidden">
+                            <!-- RETAINING YOUR CONFIRMED RELATIVE PATH -->
+                            <img src="The Operationalist Cover_Page_1 smol.png" alt="The Operationalist Magazine Cover" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <p class="text-sm font-medium text-gray-800 mb-2">Article Focus: Executive Operations Strategist Transition</p>
+                        <p class="text-gray-700 text-sm mb-4">An in-depth article featuring the essential transition of the Executive Assistant role into the more strategic Executive Operations Strategist in an AI-driven workplace.</p>
+                        <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Adobe InDesign</p>
+                        
+                        <!-- RETAINING YOUR CONFIRMED RELATIVE PATH -->
+                        <a href="The Operationalist - Caitlin Willson - Magazine Project.pdf" class="text-sm font-semibold underline" style="color: var(--color-sage);">Read The Operationalist &raquo;</a>
                     </div>
-                    
-                    <p class="text-sm font-medium text-gray-800 mb-2">Article Focus: Executive Operations Strategist Transition</p>
-                    <p class="text-gray-700 mb-4">An in-depth article featuring the essential transition of the Executive Assistant role into the more strategic Executive Operations Strategist in an AI-driven workplace.</p>
-                    <p class="text-xs font-semibold text-gray-500 mb-4">Software Used: Adobe InDesign</p>
-                    
-                    <a href="The Operationalist - Caitlin Willson - Magazine Project.pdf" class="text-sm font-semibold underline" style="color: var(--color-sage);">Read The Operationalist &raquo;</a>
                 </div>
+
+                <!-- Scroll Right Button -->
+                <button onclick="scrollCarousel('right')" class="absolute right-0 z-20 p-3 bg-white rounded-full shadow-lg hover:shadow-xl mr-2 -translate-y-1/2 top-1/2 hidden sm:block" style="color: var(--color-sage);">
+                    &gt;
+                </button>
             </div>
         </section>
 
@@ -193,7 +279,7 @@
         <!-- Link to Blog -->
         <section class="text-center">
             <h2 class="header-text text-3xl mb-6" style="color: var(--color-sage);">Visit My Blog</h2>
-            <p class="text-lg mb-8">Read my latest insights on creativity, self-reliance, and operational strategy.</p>
+            <p class="text-lg mb-8">Read my latest insights on creativity, self-reliance and operational strategy.</p>
             <a href="blog.html" class="btn-primary text-lg">Go to Blog &raquo;</a>
         </section>
 
@@ -235,7 +321,7 @@
             </div>
         </div>
         <div class="text-center mt-8">
-            <p class="text-xs" style="color: var(--color-text); font-family: var(--font-serif);">&copy; 2025 Caitlin Willson Portfolio. All Rights Reserved. | Final Academic Project</p>
+            <p class="text-xs" style="color: var(--color-text); font-family: var(--font-serif);">&copy; 2025 Caitlin Willson Portfolio. All Rights Reserved.</p>
         </div>
     </footer>
 
