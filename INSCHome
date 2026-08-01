@@ -1,0 +1,82 @@
+<!DOCTYPE html> <!-- The DOCTYPE declaration starts every HTML file and tells the web browser to process the file using the current HTML standard. - https://html.spec.whatwg.org -->
+
+<!-- The html element is the root element of an HTML page. The lang attribute specifies the language of the document, in this case en for English. Specifying the primary language of the document, aids accessibility tools like screen readers, helps search engines find content (Search Engine Optimization or SEO), and assists browsers in rendering content correctly. The end tag is at the very end of the page. -->
+<html lang="en">
+
+<!-- The head element contains meta information about the file that is mostly for the browser and other computer systems like search engines to read. The head element can contain links to CSS stylesheets or JavaScript files. -->
+<head>
+
+<!-- The charset meta tag specifies the character encoding for the document. UTF-8 encoding supports all characters and symbols. -->
+<meta charset="UTF-8">
+
+<!-- The viewport meta element controls how a webpage is displayed on different devices, particularly mobile browsers. It tells the browser how to render the page's dimensions and scaling.-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- The title element specifies the title of the page that appears in the browser's tab/title bar. It is also used by search engines and browser bookmarks to identify and display information about the page. -->
+<title>Home - Caitlin Willson's HTML Site</title>
+
+<!-- The link tag with rel="stylesheet" attribute links an external CSS stylesheet to a HTML file. The href attribute specifies the path to the CSS file (styles.css), allowing the styles defined in that file to be applied to the page. -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<!-- The body element contains the content of the HTML document that is displayed in the web browser. The end body tag is at the end of the page, just before the end html tag.  -->
+<body>
+
+<!-- Header section with navigation - The header section stays the same for all three pages in the site. -->
+<header>
+
+<!-- The best practice for accessibility, usability, and search engine optimization is to use only one h1 heading per page to clearly define the main topic. Using only one h1 heading per page also provides the clearest structure for screen readers and search engine crawlers. -->
+
+<h1>Caitlin Willson's Site</h1>
+<!-- Navigation menu with links to the three pages in the site. -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+<!-- A div element groups related content so it can be styled and laid out together with CSS. A div is a generic container element and does not have any semantic meaning on its own, unlike semantic HTML elements such as header, main, and footer. A class attribute is used to apply CSS styles to the div. This div element and the class main-content-container are used to style the main content area of the page and the <aside> element. -->
+<div class="main-content-container">
+
+<main>
+<h2>About Me</h2>
+
+<p>This is a sample paragraph. It contains some text to demonstrate paragraph usage in HTML. Paragraphs are used to group related sentences and provide structure to the content.</p>
+
+<p>Another paragraph here. Multiple paragraphs can be used to break up content for better readability.</p>
+
+<hr>
+
+<p><a href="https://www.britannica.com/topic/Lorem-ipsum">Lorem ipsum</a>, placeholder or dummy text used in typesetting and graphic design for previewing layouts. It features scrambled Latin text, which emphasizes the design over content of the layout. It is the standard placeholder text of the printing and publishing industries. Definition from <a href="https://www.britannica.com">https://www.britannica.com</a> There are many lorem ipsum text generators, <a href="https://loremipsum.io/">loremipsum.io</a> is one of them.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum recusandae mollitia eligendi explicabo expedita illum deserunt, nihil omnis hic a libero doloribus tempora quasi dignissimos dolorem tenetur alias necessitatibus perspiciatis!</p>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum recusandae mollitia eligendi explicabo expedita illum deserunt, nihil omnis hic a libero doloribus tempora quasi dignissimos dolorem tenetur alias necessitatibus perspiciatis!</p>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum recusandae mollitia eligendi explicabo expedita illum deserunt, nihil omnis hic a libero doloribus tempora quasi dignissimos dolorem tenetur alias necessitatibus perspiciatis!</p>
+
+    </main>
+    <!-- End of the main content element -->
+<!-- The aside element contains secondary or supplementary content related to the main content, such as profile info, quick facts, or notes,  -->
+<aside>
+<h3>Caitlin Willson</h3>
+         <figure>
+                <img src="person.jpg" alt="Dark gray shapes on a light gray circular background representing a person">
+                <figcaption>You can replace this with your own image or use this one</figcaption>
+            </figure>
+</main>
+    <!-- End of the main content element -->
+</div>
+<!-- End of the container div element -->
+    <!-- Beginning of the footer - Keep the footer consistent across all your pages -->
+    <footer>
+        <p>Caitlin Willson's HTML Site</p>
+    </footer>
+    <!-- End of the footer -->
+
+</body>
+</html>
+
+
