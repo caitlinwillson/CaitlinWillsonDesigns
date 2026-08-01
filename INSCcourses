@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- The DOCTYPE declaration starts every HTML file and tells the web browser to process the file using the current HTML standard. - https://html.spec.whatwg.org -->
+
+<!-- The html element is the root element of an HTML page. The lang attribute specifies the language of the document, in this case en for English. Specifying the primary language of the document, aids accessibility tools like screen readers, helps search engines find content (Search Engine Optimization or SEO), and assists browsers in rendering content correctly. The end tag is at the very end of the page. -->
+<html lang="en">
+
+<!-- The head element contains meta information about the file that is mostly for the browser and other computer systems like search engines to read. The head element can contain links to CSS stylesheets or JavaScript files. -->
+<head>
+
+<!-- The charset meta tag specifies the character encoding for the document. UTF-8 encoding supports all characters and symbols. -->
+<meta charset="UTF-8">
+
+<!-- The viewport meta element controls how a webpage is displayed on different devices, particularly mobile browsers. It tells the browser how to render the page's dimensions and scaling.-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- The title element specifies the title of the page that appears in the browser's tab/title bar. It is also used by search engines and browser bookmarks to identify and display information about the page. -->
+<title>Courses - Caitlin Willson's HTML Site</title>
+<!-- Navigation menu with links to the three pages in the site. -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+<!-- A div element groups related content so it can be styled and laid out together with CSS. A div is a generic container element and does not have any semantic meaning on its own, unlike semantic HTML elements such as header, main, and footer. A class attribute is used to apply CSS styles to the div. This div element and the class main-content-container are used to style the main content area of the page and the <aside> element. -->
+<div class="main-content-container">
+
+<main>
+<h2>Courses</h2>
+
+
+
+<table>
+    <caption>This Semester's Courses</caption>
+    <thead>
+        <tr>
+            <th scope="col">Course Department</th>
+            <th scope="col">Course Number</th>
+            <th scope="col">Course Title</th>
+            <th scope="col">Hours</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>INSC</td>
+            <td>210</td>
+            <td>Foundations of Information Technology</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>ADVR</td>
+            <td>250</td>
+            <td>Principles in Advertising</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>MATH</td>
+            <td>1530</td>
+            <td>Introductory Statistics</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>PSYC</td>
+            <td>101</td>
+            <td>Introduction to Psychology</td>
+            <td>3</td>
+        </tr>
+    </tbody>
+</table>
+</main>
+    <!-- End of the main content element -->
+</div>
+<!-- End of the container div element -->
+    <!-- Beginning of the footer - Keep the footer consistent across all your pages -->
+    <footer>
+        <p>Caitlin Willson's HTML Site</p>
+    </footer>
+    <!-- End of the footer -->
+
+</body>
+</html>
