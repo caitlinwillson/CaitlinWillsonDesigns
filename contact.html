@@ -1,31 +1,22 @@
 <!DOCTYPE html> <!-- The DOCTYPE declaration starts every HTML file and tells the web browser to process the file using the current HTML standard. - https://html.spec.whatwg.org -->
-
 <!-- The html element is the root element of an HTML page. The lang attribute specifies the language of the document, in this case en for English. Specifying the primary language of the document, aids accessibility tools like screen readers, helps search engines find content (Search Engine Optimization or SEO), and assists browsers in rendering content correctly. The end tag is at the very end of the page. -->
 <html lang="en">
-
 <!-- The head element contains meta information about the file that is mostly for the browser and other computer systems like search engines to read. The head element can contain links to CSS stylesheets or JavaScript files. -->
 <head>
-
 <!-- The charset meta tag specifies the character encoding for the document. UTF-8 encoding supports all characters and symbols. -->
 <meta charset="UTF-8">
-
 <!-- The viewport meta element controls how a webpage is displayed on different devices, particularly mobile browsers. It tells the browser how to render the page's dimensions and scaling.-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <!-- The title element specifies the title of the page that appears in the browser's tab/title bar. It is also used by search engines and browser bookmarks to identify and display information about the page. -->
 <title>Home - Caitlin Willson's HTML Site</title>
-
 <!-- The link tag with rel="stylesheet" attribute links an external CSS stylesheet to a HTML file. The href attribute specifies the path to the CSS file (styles.css), allowing the styles defined in that file to be applied to the page. -->
 <link rel="stylesheet" href="styles.css">
 </head>
 <!-- The body element contains the content of the HTML document that is displayed in the web browser. The end body tag is at the end of the page, just before the end html tag.  -->
 <body>
-
 <!-- Header section with navigation - The header section stays the same for all three pages in the site. -->
 <header>
-
 <!-- The best practice for accessibility, usability, and search engine optimization is to use only one h1 heading per page to clearly define the main topic. Using only one h1 heading per page also provides the clearest structure for screen readers and search engine crawlers. -->
-
 <h1>Caitlin Willson's Site</h1>
 <!-- Navigation menu with links to the three pages in the site. -->
         <nav>
@@ -39,31 +30,23 @@
     </header>
 <!-- A div element groups related content so it can be styled and laid out together with CSS. A div is a generic container element and does not have any semantic meaning on its own, unlike semantic HTML elements such as header, main, and footer. A class attribute is used to apply CSS styles to the div. This div element and the class main-content-container are used to style the main content area of the page and the <aside> element. -->
 <div class="main-content-container">
-
 <main>
 <h2>Contact Me</h2>
 <p>Fill out the form below and your email app will open a new message to send.</p>
-
 <!-- This form collects a visitor's name, email, and message. When submitted, it uses a mailto link to open the visitor's default email app with the form data in plain text, and required attributes ensure all fields are filled out first. -->
 <form class="contact-form" action="mailto:cwillson@vols.utk.edu" method="post" enctype="text/plain">
     <label for="name">Name</label>
     <input type="text" id="name" name="Name" required>
-
     <label for="email">Email</label>
     <input type="email" id="email" name="Email" required>
-
     <label for="message">Message</label>
     <textarea id="message" name="Message" rows="6" required></textarea>
-
     <button type="submit">Send Message</button>
 </form>
 <p><strong>Note:</strong> This form uses your default email app through a <code>mailto:</code> link. If you do not have an email app configured on your device, the submit button may not open a message window or may prompt you to configure an email app. Your browser may also display a warning message about security concerns, since using the <code>mailto:</code> link involves sending data through your browser and isn't a secure method for transmitting information. But this is an assignment about demonstrating the code for a simple contact form in HTML, not information security.Don't use <code>mailto:</code> for a form meant for real-world use.</p>
-
 <p>Instead of using the <code>mailto:</code> link in the form, a real-world site would use some type of secure method on the server to accept the form data.</p>
-
 <p>Instead of using the form we can just use a <code>mailto:</code> link directly on the page, like the paragraph below:</p>
 <p>To contact me, send an email to <a href="mailto:cwillson@vols.utk.edu">Caitlin Willson/a>.</p>
-
 </main>
     <!-- End of the main content element -->
 </div>
@@ -73,6 +56,5 @@
         <p>Caitlin Willson's HTML Site</p>
     </footer>
     <!-- End of the footer -->
-
 </body>
 </html>
