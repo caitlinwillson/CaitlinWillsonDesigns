@@ -156,6 +156,7 @@ tbody td {
 
 /* Style the header with dark background, white text, and centered content - reduced padding for mobile */
 header {
+    font-family: 'Abril Fatface', serif;
     background-color: var(--color-dark);
     color: var(--color-text-light);
     padding: 15px;
