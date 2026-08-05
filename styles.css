@@ -74,7 +74,7 @@
 
 /* Body font styles */
 body {
-    font-family: 'Poppins', "sans-serif; /* Uses whatever the user's system default sans-serif font is. */
+    font-family: 'Poppins', sans-serif; /* Uses whatever the user's system default sans-serif font is. */
     line-height: 1.6; /* Sets the preferred height of a line of text. Most browsers have a default line height of 1.2, but 1.6 is more readable for body text. */
     display: flex;
     flex-direction: column;
